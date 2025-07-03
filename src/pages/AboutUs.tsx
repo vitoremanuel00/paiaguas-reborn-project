@@ -19,7 +19,7 @@ const AboutUs = () => {
         </section>
 
         {/* História Section */}
-        <section className="py-16 bg-white">
+        {/* <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-paiaguas mb-6">Nossa História</h2>
@@ -74,7 +74,40 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
+        <section className="py-16 bg-white">
+  <div className="container mx-auto px-4">
+    <div className="max-w-4xl mx-auto">
+      <h2 className="text-3xl font-bold text-paiaguas mb-6">Quem Somos</h2>
+      <p className="mb-4 text-gray-700">
+        O <strong>Instituto Paiaguás</strong> é uma Organização da Sociedade Civil de Interesse Público (OSCIP), fundada em 2008 e sediada em Cuiabá-MT. Atuamos com projetos que promovem a saúde, educação, assistência social, cultura, esporte, lazer, meio ambiente, agricultura, tecnologia, indústria e comércio.
+      </p>
+      <p className="mb-4 text-gray-700">
+        Nosso trabalho é realizado de forma complementar ao Poder Público, por meio de Termos de Parceria legalmente instituídos. Estamos presentes em diversos municípios do Mato Grosso, com resultados concretos nas áreas sociais e ambientais.
+      </p>
+
+      <h3 className="text-2xl font-semibold mt-8 mb-2 text-paiaguas-dark">Missão</h3>
+      <p className="mb-4 text-gray-700">
+        Contribuir para o desenvolvimento social por meio de ações planejadas, promovendo a cidadania, valorizando o ser humano e o meio ambiente com objetividade, transparência e eficácia.
+      </p>
+
+      <h3 className="text-2xl font-semibold mt-8 mb-2 text-paiaguas-dark">Visão</h3>
+      <p className="mb-4 text-gray-700">
+        Ser referência no Terceiro Setor.
+      </p>
+
+      <h3 className="text-2xl font-semibold mt-8 mb-2 text-paiaguas-dark">Valores</h3>
+      <ul className="list-disc list-inside text-gray-700">
+        <li>Respeito ao próximo e à sociedade</li>
+        <li>Responsabilidade social e ambiental</li>
+        <li>Valorização da vida e da dignidade da pessoa humana</li>
+        <li>Transparência, eficácia e agilidade nas ações</li>
+        <li>Interação com outros atores sociais</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 
         {/* Equipe Section */}
         <section className="py-16 bg-gray-50">

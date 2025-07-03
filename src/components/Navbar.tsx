@@ -5,6 +5,10 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
+import logo from '../assets/logo.png';
+
+
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
@@ -21,10 +25,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-2" onClick={closeMenu}>
-            <div className="w-10 h-10 bg-paiaguas rounded-full flex items-center justify-center">
-              <span className="text-white font-bold">IP</span>
-            </div>
-            <span className="text-paiaguas font-bold text-xl">Instituto Paiaguás</span>
+            <img src={logo} alt="Instituto Paiaguás" className="h-10 w-auto" />
+            
           </Link>
           
           {/* Desktop Menu */}

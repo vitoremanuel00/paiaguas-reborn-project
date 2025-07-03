@@ -1,179 +1,331 @@
+// // import React, { useState } from 'react';
+// // import Navbar from '@/components/Navbar';
+// // import Footer from '@/components/Footer';
 
+// // const projectCategories = [
+// //   { id: 'all', name: 'Todos' },
+// //   { id: 'saude', name: 'Saúde' },
+// //   { id: 'educacao', name: 'Educação' },
+// //   { id: 'assistencia', name: 'Assistência Social' },
+// //   { id: 'meioambiente', name: 'Meio Ambiente' },
+// //   { id: 'desenvolvimento', name: 'Desenvolvimento Humano' }
+// // ];
+// // const projects = [
+// //   {
+// //     id: 1,
+// //     title: 'Carlinda Saudável',
+// //     category: 'saude',
+// //     description: 'Projeto de promoção da saúde com atendimentos médicos, exames e ações preventivas.',
+// //     image: 'https://images.unsplash.com/photo-1579154204601-01588f351e8e?auto=format&fit=crop&w=600&q=80',
+
+
+// //   },
+// //   {
+// //     id: 2,
+// //     title: 'Construindo Nosso Futuro',
+// //     category: 'educacao',
+// //     description: 'Apoio à educação municipal com foco em estrutura, capacitação e inclusão.',
+// //     image: 'https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=600&q=80',
+
+// //   },
+// //   {
+// //     id: 3,
+// //     title: 'Integração Sociofamiliar',
+// //     category: 'assistencia',
+// //     description: 'Assistência social e fortalecimento de vínculos em comunidades vulneráveis.',
+// //     image: 'https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=600&q=80',
+// //   },
+// //   {
+// //     id: 4,
+// //     title: 'Produzir e Conservar',
+// //     category: 'meioambiente',
+// //     description: 'Projeto ambiental que une agricultura familiar e preservação do meio ambiente.',
+// //     image: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=80',
+// //   },
+// //   {
+// //     id: 5,
+// //     title: 'Transformar Vida',
+// //     category: 'desenvolvimento',
+// //     description: 'Capacitação e inclusão social para transformar vidas em diversos municípios.',
+// //     image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80',
+// //   },
+// // ];
+
+
+// // const Projects = () => {
+// //   const [selectedCategory, setSelectedCategory] = useState('all');
+
+// //   const filteredProjects = selectedCategory === 'all'
+// //     ? projects
+// //     : projects.filter(project => project.category === selectedCategory);
+
+// //   return (
+// //     <>
+// //       <Navbar />
+// //       <section className="py-16 bg-white min-h-screen">
+// //         <div className="container mx-auto px-4">
+// //           <h2 className="text-3xl font-bold text-paiaguas mb-8 text-center">Nossos Projetos</h2>
+
+// //           {/* Filtro */}
+// //           <div className="flex justify-center mb-8 flex-wrap gap-4">
+// //             {projectCategories.map(category => (
+// //               <button
+// //                 key={category.id}
+// //                 onClick={() => setSelectedCategory(category.id)}
+// //                 className={`px-4 py-2 rounded-full border ${
+// //                   selectedCategory === category.id
+// //                     ? 'bg-paiaguas text-white border-paiaguas'
+// //                     : 'bg-white text-paiaguas border-paiaguas'
+// //                 } hover:bg-paiaguas hover:text-white transition-colors`}
+// //               >
+// //                 {category.name}
+// //               </button>
+// //             ))}
+// //           </div>
+
+// //           {/* Lista de Projetos */}
+// //           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+// //             {filteredProjects.map(project => (
+// //               <div key={project.id} className="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+// //                 <img
+// //                   src={project.image}
+// //                   alt={project.title}
+// //                   className="w-full h-48 object-cover"
+// //                 />
+// //                 <div className="p-4">
+// //                   <h3 className="text-xl font-semibold text-paiaguas mb-2">{project.title}</h3>
+// //                   <p className="text-gray-700 text-sm">{project.description}</p>
+// //                 </div>
+// //               </div>
+// //             ))}
+// //           </div>
+// //         </div>
+// //       </section>
+// //       <Footer />
+// //     </>
+// //   );
+// // };
+
+// // export default Projects;
+
+// import React, { useState } from 'react';
+// import Navbar from '@/components/Navbar';
+// import Footer from '@/components/Footer';
+
+// const projectCategories = [
+//   { id: 'all', name: 'Todos' },
+//   { id: 'saude', name: 'Saúde' },
+//   { id: 'educacao', name: 'Educação' },
+//   { id: 'assistencia', name: 'Assistência Social' },
+//   { id: 'meioambiente', name: 'Meio Ambiente' },
+//   { id: 'desenvolvimento', name: 'Desenvolvimento Humano' }
+// ];
+
+// const projects = [
+//   {
+//     id: 1,
+//     title: 'Carlinda Saudável',
+//     category: 'saude',
+//     description: 'Projeto de promoção da saúde com atendimentos médicos, exames e ações preventivas.',
+//     image: 'https://images.unsplash.com/photo-1588776814546-ec7aa270d2fd?auto=format&fit=crop&w=600&q=80',
+//   },
+//   {
+//     id: 2,
+//     title: 'Construindo Nosso Futuro',
+//     category: 'educacao',
+//     description: 'Apoio à educação municipal com foco em estrutura, capacitação e inclusão.',
+//     image: 'https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=600&q=80',
+//   },
+//   {
+//     id: 3,
+//     title: 'Integração Sociofamiliar',
+//     category: 'assistencia',
+//     description: 'Assistência social e fortalecimento de vínculos em comunidades vulneráveis.',
+//     image: 'https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=600&q=80',
+//   },
+//   {
+//     id: 4,
+//     title: 'Produzir e Conservar',
+//     category: 'meioambiente',
+//     description: 'Projeto ambiental que une agricultura familiar e preservação do meio ambiente.',
+//     image: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=80',
+//   },
+//   {
+//     id: 5,
+//     title: 'Transformar Vida',
+//     category: 'desenvolvimento',
+//     description: 'Capacitação e inclusão social para transformar vidas em diversos municípios.',
+//     image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80',
+//   },
+// ];
+
+// const Projects = () => {
+//   const [selectedCategory, setSelectedCategory] = useState('all');
+
+//   const filteredProjects = selectedCategory === 'all'
+//     ? projects
+//     : projects.filter(project => project.category === selectedCategory);
+
+//   return (
+//     <>
+//       <Navbar />
+//       <section className="py-16 bg-white min-h-screen">
+//         <div className="container mx-auto px-4">
+//           <h2 className="text-3xl font-bold text-paiaguas mb-8 text-center">Nossos Projetos</h2>
+
+//           {/* Filtro */}
+//           <div className="flex justify-center mb-8 flex-wrap gap-4">
+//             {projectCategories.map(category => (
+//               <button
+//                 key={category.id}
+//                 onClick={() => setSelectedCategory(category.id)}
+//                 className={`px-4 py-2 rounded-full border ${
+//                   selectedCategory === category.id
+//                     ? 'bg-paiaguas text-white border-paiaguas'
+//                     : 'bg-white text-paiaguas border-paiaguas'
+//                 } hover:bg-paiaguas hover:text-white transition-colors`}
+//               >
+//                 {category.name}
+//               </button>
+//             ))}
+//           </div>
+
+//           {/* Lista de Projetos */}
+//           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+//             {filteredProjects.map(project => (
+//               <div key={project.id} className="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+//                 <img
+//                   src={project.image}
+//                   alt={project.title}
+//                   className="w-full h-48 object-cover"
+//                 />
+//                 <div className="p-4">
+//                   <h3 className="text-xl font-semibold text-paiaguas mb-2">{project.title}</h3>
+//                   <p className="text-gray-700 text-sm">{project.description}</p>
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+//       <Footer />
+//     </>
+//   );
+// };
+
+// export default Projects;
+import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+
+const projectCategories = [
+  { id: 'all', name: 'Todos' },
+  { id: 'saude', name: 'Saúde' },
+  { id: 'educacao', name: 'Educação' },
+  { id: 'assistencia', name: 'Assistência Social' },
+  { id: 'meioambiente', name: 'Meio Ambiente' },
+  { id: 'desenvolvimento', name: 'Desenvolvimento Humano' }
+];
+
+const projects = [
+  {
+    id: 1,
+    slug: 'carlinda-saudavel',
+    title: 'Carlinda Saudável',
+    category: 'saude',
+    description: 'Projeto de promoção da saúde com atendimentos médicos, exames e ações preventivas.',
+    image: 'https://images.unsplash.com/photo-1588776814546-ec7aa270d2fd?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 2,
+    slug: 'construindo-nosso-futuro',
+    title: 'Construindo Nosso Futuro',
+    category: 'educacao',
+    description: 'Apoio à educação municipal com foco em estrutura, capacitação e inclusão.',
+    image: 'https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 3,
+    slug: 'integracao-sociofamiliar',
+    title: 'Integração Sociofamiliar',
+    category: 'assistencia',
+    description: 'Assistência social e fortalecimento de vínculos em comunidades vulneráveis.',
+    image: 'https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 4,
+    slug: 'produzir-e-conservar',
+    title: 'Produzir e Conservar',
+    category: 'meioambiente',
+    description: 'Projeto ambiental que une agricultura familiar e preservação do meio ambiente.',
+    image: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 5,
+    slug: 'transformar-vida',
+    title: 'Transformar Vida',
+    category: 'desenvolvimento',
+    description: 'Capacitação e inclusão social para transformar vidas em diversos municípios.',
+    image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80',
+  },
+];
 
 const Projects = () => {
-  const projectCategories = [
-    { id: 'all', name: 'Todos' },
-    { id: 'conservation', name: 'Conservação' },
-    { id: 'education', name: 'Educação Ambiental' },
-    { id: 'research', name: 'Pesquisa' },
-    { id: 'development', name: 'Desenvolvimento' }
-  ];
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const projects = [
-    {
-      id: 1,
-      title: 'Monitoramento de Onças-pintadas',
-      category: 'conservation',
-      description: 'Programa de monitoramento de populações de onças-pintadas no Pantanal através de armadilhas fotográficas e colares GPS.',
-      image: 'https://images.unsplash.com/photo-1501780392773-287d506245a5',
-    },
-    {
-      id: 2,
-      title: 'Recuperação de Áreas Degradadas',
-      category: 'conservation',
-      description: 'Projeto de reflorestamento e recuperação de áreas degradadas pela ação humana e incêndios florestais.',
-      image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09',
-    },
-    {
-      id: 3,
-      title: 'Escola do Pantanal',
-      category: 'education',
-      description: 'Programa educativo que leva conhecimento sobre ecologia e conservação do Pantanal para escolas rurais e urbanas.',
-      image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b',
-    },
-    {
-      id: 4,
-      title: 'Capacitação de Professores',
-      category: 'education',
-      description: 'Treinamento para educadores sobre temas ambientais com foco na aplicação em sala de aula.',
-      image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655',
-    },
-    {
-      id: 5,
-      title: 'Censo de Aves Aquáticas',
-      category: 'research',
-      description: 'Levantamento sistemático das espécies de aves aquáticas presentes no Pantanal e monitoramento populacional.',
-      image: 'https://images.unsplash.com/photo-1452570053594-1b985d6ea890',
-    },
-    {
-      id: 6,
-      title: 'Impactos das Mudanças Climáticas',
-      category: 'research',
-      description: 'Estudo dos efeitos das alterações climáticas nos ciclos de inundação do Pantanal e suas consequências para o ecossistema.',
-      image: 'https://images.unsplash.com/photo-1561470508-fd4df1090e23',
-    },
-    {
-      id: 7,
-      title: 'Turismo Sustentável',
-      category: 'development',
-      description: 'Desenvolvimento de modelos de turismo ecológico que beneficiem as comunidades locais e minimizem impactos ambientais.',
-      image: 'https://images.unsplash.com/photo-1530789253388-582c481c54b0',
-    },
-    {
-      id: 8,
-      title: 'Produtos da Sociobiodiversidade',
-      category: 'development',
-      description: 'Apoio à produção e comercialização de produtos tradicionais do Pantanal, valorizando o conhecimento local.',
-      image: 'https://images.unsplash.com/photo-1595351298020-038700609878',
-    },
-  ];
+  const filteredProjects = selectedCategory === 'all'
+    ? projects
+    : projects.filter(project => project.category === selectedCategory);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <>
       <Navbar />
-      <main className="flex-grow">
-        {/* Hero Section */}
-        <section className="bg-paiaguas py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Nossos Projetos</h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Conheça as iniciativas que estamos desenvolvendo para a conservação e o desenvolvimento sustentável do Pantanal
-            </p>
-          </div>
-        </section>
+      <section className="py-16 bg-white min-h-screen">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-paiaguas mb-8 text-center">Nossos Projetos</h2>
 
-        {/* Projects Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <Tabs defaultValue="all" className="max-w-5xl mx-auto">
-              <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 mb-8">
-                {projectCategories.map((category) => (
-                  <TabsTrigger 
-                    key={category.id} 
-                    value={category.id}
-                    className="text-sm md:text-base"
-                  >
-                    {category.name}
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-              
-              {/* All Projects Tab */}
-              <TabsContent value="all">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {projects.map((project) => (
-                    <ProjectCard key={project.id} project={project} />
-                  ))}
+          {/* Filtro por categoria */}
+          <div className="flex justify-center mb-8 flex-wrap gap-4">
+            {projectCategories.map(category => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-4 py-2 rounded-full border ${
+                  selectedCategory === category.id
+                    ? 'bg-paiaguas text-white border-paiaguas'
+                    : 'bg-white text-paiaguas border-paiaguas'
+                } hover:bg-paiaguas hover:text-white transition-colors`}
+              >
+                {category.name}
+              </button>
+            ))}
+          </div>
+
+          {/* Lista de projetos */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredProjects.map(project => (
+              <Link
+                key={project.id}
+                to={`/projetos/${project.slug}`}
+                className="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 block"
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="text-xl font-semibold text-paiaguas mb-2">{project.title}</h3>
+                  <p className="text-gray-700 text-sm">{project.description}</p>
                 </div>
-              </TabsContent>
-              
-              {/* Filter by category */}
-              {projectCategories.slice(1).map((category) => (
-                <TabsContent key={category.id} value={category.id}>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects
-                      .filter((project) => project.category === category.id)
-                      .map((project) => (
-                        <ProjectCard key={project.id} project={project} />
-                      ))}
-                  </div>
-                </TabsContent>
-              ))}
-            </Tabs>
+              </Link>
+            ))}
           </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-paiaguas mb-4">Interesse em Apoiar Nossos Projetos?</h2>
-              <p className="text-lg text-gray-700 mb-8">
-                Estamos sempre abertos a novas parcerias e colaborações. Se você ou sua organização deseja apoiar 
-                nosso trabalho, entre em contato conosco.
-              </p>
-              <Button asChild size="lg" className="bg-paiaguas hover:bg-paiaguas-dark">
-                <Link to="/contato">
-                  Entre em Contato
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </section>
-      </main>
+        </div>
+      </section>
       <Footer />
-    </div>
-  );
-};
-
-const ProjectCard = ({ project }: { project: any }) => {
-  return (
-    <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-      <div className="h-48 overflow-hidden">
-        <img 
-          src={project.image} 
-          alt={project.title}
-          className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
-        />
-      </div>
-      <CardContent className="p-6">
-        <h3 className="text-xl font-bold text-gray-800 mb-2">{project.title}</h3>
-        <p className="text-gray-600 mb-4">{project.description}</p>
-        <Button asChild variant="outline" className="mt-2">
-          <Link to={`/projetos/${project.id}`}>
-            Ver detalhes
-          </Link>
-        </Button>
-      </CardContent>
-    </Card>
+    </>
   );
 };
 

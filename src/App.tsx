@@ -10,6 +10,7 @@ import Projects from "./pages/Projects";
 import Publications from "./pages/Publications";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import CarlindaSaudavel from './pages/projetos/CarlindaSaudavel.tsx  ';
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/projetos/:id" element={<NotFound />} />
           <Route path="/publicacoes" element={<Publications />} />
           <Route path="/publicacoes/:id" element={<NotFound />} />
+          <Route path="/projetos/carlinda-saudavel" element={<CarlindaSaudavel />} />
           <Route path="/contato" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

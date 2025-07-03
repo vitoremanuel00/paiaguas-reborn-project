@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const NotFound = () => {
-  const location = useLocation();
+  const location = useLocation(); 
 
   useEffect(() => {
     console.error(
