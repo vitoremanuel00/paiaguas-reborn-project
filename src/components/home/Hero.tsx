@@ -10,12 +10,12 @@ const slides = [
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1535914254981-b5012eebbd15?auto=format&fit=crop&w=1600&q=80',
+    image: 'https://jpimg.com.br/uploads/2018/12/Sala-de-aula-professor.jpg',
     alt: 'Educação e desenvolvimento humano',
   },
   {
     id: 3,
-    image: 'https://www.goiascooperativo.coop.br/wp-content/uploads/2023/06/unimed.jpeg',
+    image: 'https://forbes.com.br/wp-content/uploads/2021/02/ForbesSaude_VacinaIdoso_160221_-LuisAlvarez_GettyImages.jpg',
     alt: 'Ações comunitárias em saúde',
   },
 ];
@@ -26,7 +26,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 6000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
