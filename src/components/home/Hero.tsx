@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 const slides = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1597764692502-82f6d7293b4d?auto=format&fit=crop&w=1600&q=80',
+    image: 'https://files.adventistas.org/noticias/pt/2020/06/20200618_173430.jpg',
     alt: 'Atuação social no interior de MT',
   },
   {
@@ -15,7 +15,7 @@ const slides = [
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1616596871866-fb49ad4d085b?auto=format&fit=crop&w=1600&q=80',
+    image: 'https://www.goiascooperativo.coop.br/wp-content/uploads/2023/06/unimed.jpeg',
     alt: 'Ações comunitárias em saúde',
   },
 ];
